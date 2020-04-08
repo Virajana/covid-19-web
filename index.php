@@ -38,26 +38,47 @@ echo "<br>Try my app: " . $local_new_cases."<br>";*/
 <body>
 <div id="header">
 	<div id="menu" class="container">
+	
 		<ul>
 			<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
 			<li><a href="#" accesskey="1" title="">Services</a></li>
 			<li><a href="#" accesskey="2" title="">Our Clients</a></li>
 			<li><a href="#" accesskey="3" title="">About Us</a></li>
-			<li><a href="#" accesskey="4" title="">Careers</a></li>
 			<li><a href="#" accesskey="5" title="">Contact Us</a></li>
 		</ul>
-	</div>
+		</div>
+		
 </div>
 <div id="page-wrapper">
 <div id="page" class="container">
-	<div id="content">
+<div class="w3-content w3-section">
+  <img class="mySlides" src="img/Header1.jpg" style="width:1400px; height:600px" >
+  <img class="mySlides" src="img/Header3.jpg" style="width:1400px; height:600px" >
+  <img class="mySlides" src="img/Header4.jpg" style="width:1400px; height:600px">
+</div>
+<div id="content">
 		<div class="title">
-			<h2>Covid-19</h2>
-			<span class="byline">Coronavirus disease 2019 (COVID-19)</span>
+		<span class="byline">Coronavirus disease 2019 (COVID-19)</span>
 		</div>
 		<p>Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19. </p>
 	</div>
-	<div id="sidebar"><a href="#" class="image image-full"><img src="img/virus.jpg" alt="" /></a></div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 </div>
 </div>
 <div id="featured-wrapper">
